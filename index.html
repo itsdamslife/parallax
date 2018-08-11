@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel="stylesheet" href="index.css">
+    <title>Parallax</title>
+  </head>
+  <body>
+    <div id="img1"></div>
+    <div><h2>DIV</h2></div>
+    <div id="img2"></div>
+    <div><h2>DIV</h2></div>
+    <script>
+      window.addEventListener("scroll", function(){
+        var offset = window.pageYOffset;
+        document.getElementById("img1").style.backgroundPositionY = offset * 1 + "px"; // stay in place
+        document.getElementById("img2").style.backgroundPositionY = offset * 0.5 + "px"; // move 50% slower than the page
+      });
+    </script>
+  </body>
+</html>
